@@ -2,13 +2,87 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Tables in Tables</title>
+    <style>
+      table,
+      th,
+      tr,
+      td {
+        border: 1px solid black;
+        text-align: center;
+        /* justify-content: center; */
+        /* border-collapse: collapse; */
+      }
+    </style>
   </head>
   <body>
-    <table style="width: 100%; height: 100%">
-      <!-- Your code here -->
+    <table>
+      <!-- 1st row -->
+      <tr>
+        <!-- 1st row 1st column -->
+        <th>
+          <table>
+            <tr>
+              <td colspan="2">Nested Table 2</td>
+            </tr>
+            <tr>
+              <td>Column 1</td>
+              <td>Column 2</td>
+            </tr>
+            <tr>
+              <td>abc</td>
+              <td>def</td>
+            </tr>
+          </table>
+        </th>
+
+        <!-- 1st row second column -->
+        <th>
+          <table>
+            <tr>
+              <td>Nested Table 1</td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>List item</li>
+                  <li>List item</li>
+                  <li>List item</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </th>
+      </tr>
+
+      <!-- second row -->
+      <tr>
+        <!-- second row 1st column -->
+        <td>
+          <table>
+            <tr>
+              <td colspan="2">Nested Table 3</td>
+            </tr>
+            <tr>
+              <td><a href="">Nested Table</a></td>
+              <td>Demo Continued</td>
+            </tr>
+          </table>
+        </td>
+        <!-- second row 2nd column -->
+        <td>
+          <table>
+            <tr>
+              <td>Nested Table 4</td>
+            </tr>
+            <tr>
+              <td bgcolor="black"><font color="white">HTML</font></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
     </table>
   </body>
 </html>
